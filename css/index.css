@@ -1,0 +1,55 @@
+        /*общие*/
+        <body > header {
+            /*  background-color: floralwhite;
+            /*цвет фона
+            color: burlywood;
+            цвет текста
+            padding: 20px;*/
+
+
+        }
+
+        main {
+            background-color: rgba(245, 229, 206, 0.44);
+            color: burlywood;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: floralwhite;
+            color: burlywood;
+            padding: 10px;
+        }
+
+        /*индивидульные*/
+        h1 {
+            margin: 10px;
+        }
+
+        p {
+            margin: 10;
+        }
+
+        img {
+            width: 300px;
+            /*ширина картинки*/
+            /* height: 200px;высота крартинки*/
+
+        }
+
+        #main-a {
+            margin: auto;
+            display: block;
+            text-align: center;
+            margin: auto;
+            background-color: blanchedalmond;
+            max-width: 200px;
+            border-radius: 5px;
+            padding: 15px;
+            text-decoration: none;
+            color: burlywood;
+        }
+
+        a:hover {
+            background-color: #ebd3ae
+        }

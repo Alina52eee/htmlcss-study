@@ -1,0 +1,17 @@
+header {
+    background-color: bisque;
+    color: antiquewhite;
+    padding: 25px;
+    text-align: center;
+    border-radius:20px;
+    margin: 0px 20px;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+#menu{
+    display: flex;
+    border-radius:azure; 
+}
