@@ -1,6 +1,6 @@
-header {
+/*header {
     background-color: bisque;
-    color: antiquewhite;
+    color: #b5905f;
     padding: 25px;
     text-align: center;
     border-radius:20px;
@@ -14,4 +14,51 @@ h2 {
 #menu{
     display: flex;
     border-radius:azure; 
+}*/
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #ef78f4;
+    border-bottom-style: solid;
+    border-bottom-color: #aa2be2;
+    border-bottom-width: 5px;
+    padding: 5px;
+}
+
+img {
+    width: 5vw;
+    /*viewport width - ширина окна браузера*/
+    min-width: 35px;
+    max-width: 70px;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+h1 {
+    display: inline;
+    vertical-align: middle;
+    font-size: clamp(24px, 2.5vw; 32px);
+}
+
+a {
+    background-color: #c55afa;
+    color: rebeccapurple;
+    padding: clamp(5px, 1.75vw, 15px)
+        /*функцыя()*/
+        display: inline-block;
+    margin: 10px clamp(10px, 2vw, 100px, ) text-decoration: none;
+    font-size: clamp(12px, 2vw, f f r16px);
+    border-radius: 10px;
+}
+
+nav {
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #b254e0;
+    text-decoration: underline;
 }
