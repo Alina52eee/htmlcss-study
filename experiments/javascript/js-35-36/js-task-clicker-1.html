@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+         img {
+            width: 350px;
+            transition-duration: 0.2s;
+             width: 850px;
+            height: 500px;
+        }
+
+        img:hover {
+            transform: scale(1.035);
+        }
+
+        img:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+   
+    <img src="https://www.gazeta.uz/media/img/2018/10/xtResb15390900122410_b.jpg" onclick="bal()" alt="">
+    <p>Баллы:</p>
+    <p id="score">Молодец, у тебя вот столько помидорок :)</p>
+    <script>
+         var points = localStorage.getItem("clickerPoints");
+        
+       function bal(){
+            points++;
+            localStorage.setItem("clickerPoints",points)
+           
+           document.querySelector("p").textContent = points;
+           
+           document.querySelector("p").textContent = localStorage.getItem("clickerPoints")
+       }
+    </script>
+</body>
+</html>

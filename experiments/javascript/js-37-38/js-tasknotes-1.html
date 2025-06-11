@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <!--
+    Сделать: "приложение" для заметок.
+    пользователь вводить текст и может сохранить запись на страницу   
+    
+    Использовать минимальные стили CSS для создания карточки "заметка"
+    -->
+    
+    <!--
+      Разбор на элементы:
+      - Заголовок.
+      - Текстовое поле
+      - Кнопка "сохранить"
+      - Карточка заметки
+      - CSS: граница, округление углов,фоновый цвет,отступы.
+      - JS:
+         - Onklick  
+         -
+         -
+         -
+     -->
+     <h1>Заметки</h1>
+      <textarea id="zametkaBox"></textarea>
+     <br>
+     <p></p>
+     <button onclick="zametki()">Сохранить</button>
+     
+     <h2>Все заметки:</h2>
+     <div id="zametkaList">
+      
+    </div>
+     <script> 
+      function zametki(){
+        var textArea = document.querySelector("#zametkaBox")
+        var text = textArea.value
+          
+          
+      }
+    
+    
+    </script>
+</body>
+</html>
