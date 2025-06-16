@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="name"></textarea> <br>
+    <textarea name="" id="password"></textarea>
+    <button onclick="plus()">кнопка</button>
+    <script>
+      function plus() {
+          
+          var nameInput = document.querySelector("#name")
+          var passwordInput = document.querySelector("#password")
+          
+          var name = nameInput.value
+          var password = passwordInput.value
+          
+          document.body.innerHTML += ` <br> Имя: ${name}; Пароль :${password}`
+      }
+    </script>
+</body>
+</html>
