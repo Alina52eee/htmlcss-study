@@ -1,0 +1,179 @@
+    <!--
+  
+  Функционал:
+  - Генерирование постов:
+    - Имя и фото аккаунта
+    - Фото поста
+    - Текст поста
+    - Лайки, избраные, комменты
+    - Время загрузки
+    
+    
+  - Элементы:   
+  - Пост: 
+    - Имя и фото аккаунта
+    - Фото поста
+    - Текст поста
+    - Лайки, избраные, комменты
+    - Время загрузки
+    
+ 
+  - Модули:
+    - Генерации текста из набора слов "Lorem inpus".    
+    - Случайный выбор картинок из готового набора.
+    - Генерация чисел через Math.Random().
+    - Генерация времени через  Date.now().
+    - Создание постов при прокрутке вниз.
+    
+План выполнения:
+ 1. Дизайн поста.       
+ 2. Скрипт генерации поста:
+   2.1 Генерации картинок:
+     2.1.1. Скачать набор (5-10).
+     2.1.2. Модуль выбора картинок.
+   2.2 Генерация текста:
+     2.2.1. Создать набор слов.
+     2.2.2. Модуль создания текста.
+  2.3. Генерация чисель.            
+  2.4. Генерация времени.                         
+ 3. Дизайн ленты.
+ 4. Скрипт ленты.       
+    
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <style>
+        :root{
+            --primary: #7b1616;
+            --secondary: #e3b2c5;
+            --teritiary: #b25d27;
+        }
+        body{
+            background-color:var(--secondary);
+        }
+        .post{
+            background-color: var( --primary);
+            width: 250px;
+            padding: 5px;
+            border-radius:10px;
+            border-style: solid;
+            border-color: #601f1f;
+            border-width: 1px;
+            box-shadow: 0px 3px 0px rgba(0,0,0,0.1);
+        }
+        .post-account{
+            display: flex;
+            width: 100%;
+            height: 75px;
+            padding-bottom: 10px;    
+        }
+        .post-account-img{
+            background-color: #bf784c;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            overflow: hidden; 
+        }
+        .post-account-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        .post-account-name{
+            width: 80%;
+            height: 100%;
+        }
+        .post-photo{
+            background-color: #8e0000;
+            width: 100%;
+            height: 150px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }  
+        .post-photo img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        .post-info{
+            background-color: var(--teritiary);
+            width: 100%;
+            height: 100px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post">
+        <div class="post-account">
+            <div class="post-account-img">
+                <img src="imgs/v8j21kt1e2j04tp95e3jgyuxk7ci2pae.webp" alt="">
+            </div>
+            <div class="post-account-name"></div>
+        </div>
+        <div class="post-photo"><img src="imgs/images.jpg" alt=""></div>
+        <div class="post-info"></div>
+    </div>
+    
+    
+    <script>
+       var postPhoto = document.querySelector(".post-photo img")
+       console.log(postPhoto)
+        
+        var imgIndex = Math.ceil(Math.random() * 5)
+        
+       postPhoto.src = `imgs/${imgIndex}.jpg`
+       
+       
+       
+        var postAccountImg = document.querySelector(".post-account-img img")
+       console.log(postPhoto)
+        
+        var accountImgIndex = Math.ceil(Math.random() * 5)
+        
+       postAccountImg.src = `imgs/${accountImgIndex}.jpg`
+       
+       //Генерация текста
+        var wordString = "Lorem ipsum dolor sit amet consectetur adipisicing elit Consequuntur nam accusamus harum delectus, perspiciatis eum et facere praesentium at nulla eveniet Repellendus velit dignissimos veniam consectetur Modi cum ad Sequi adipisci officia voluptatem fuga labore qui debitis beatae pariatur aut autem quas ab quos tempore architecto tenetur soluta praesentium excepturi possimus obcaecati vero Omnis et maxime facilis quam Excepturi non culpa Sint non nobis odio excepturi aut natus illo repellendus officia nihil blanditiis veritatis error quaerat debitis aliquid perferendis cum delectus eaque iusto consequatur ullam atque dolore itaque doloribus sunt obcaecati Veniam maxime eveniet harum nobis et doloribus Velit inventore"
+        
+        var i = 0
+        var current = 0 
+        var target = Math.ceil(Math.random() * 17)
+        var word = ""
+        while(i < wordString.length){
+            word += wordString[i]
+            if(wordString[i] === " "){
+                current += 1
+            }
+            if(current >= target){
+               break 
+            }else if (wordString[i] === " "){
+                word = ""
+            }
+            i++
+        }
+        console.log(word, current, target)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
